@@ -56,7 +56,7 @@ public class Titik {
         ordinat = i*ordinat;
     }
     //Translasi
-    void translasi(double x, double y){
+    void geser(double x, double y){
         absis = absis + x;
         ordinat = ordinat + y;
     }
