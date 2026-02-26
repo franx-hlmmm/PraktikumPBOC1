@@ -15,7 +15,7 @@ public class MTitik {
         T1.setOrdinat(8.0);
         System.out.println("Jarak Titik T1 ke Titik T2 adalah " +  T1.jarakTitik(T2));
         T1.printTitik();
-        T1.translasi(3.0, 5.0);
+        T1.geser(3.0, 5.0);
         T1.printTitik();
     }
 }
