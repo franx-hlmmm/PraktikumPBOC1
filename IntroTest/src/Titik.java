@@ -1,3 +1,8 @@
+/* Nama File    : Titik.java
+ * Deskripsi    : berisi atribut dan method dalam class Titik
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 26 Februari 2026
+*/
 public class Titik {
     /****ATRIBUT****/
     double absis;
