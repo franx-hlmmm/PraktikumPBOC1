@@ -110,4 +110,8 @@ public class Titik {
     static int getcounterTitik(){
         return counterTitik;
     }
+
+    void printCounterTitik(){
+        System.out.println(this.counterTitik);
+    }
 }
