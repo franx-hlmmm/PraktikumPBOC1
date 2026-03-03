@@ -9,14 +9,15 @@ public class MTitik {
         System.out.println("Jumlah Objek Titik = " + Titik.getcounterTitik());
         System.out.println("T1 = (" + T1.getAbsis() + "," + T1.getOrdinat() + ")" );
         Titik T2 = new Titik(5.0, 12.0);
-        System.out.println("Jarak Titik T2 ke Titik pusat adalah " +  T2.jarakTitik());
+        System.out.println("Jarak Titik T2 ke Titik pusat adalah " +  T2.getJarakPusat());
         System.out.println("Jumlah Objek Titik = " + Titik.getcounterTitik());
         T1.setAbsis(2.0);
         T1.setOrdinat(8.0);
-        System.out.println("Jarak Titik T1 ke Titik T2 adalah " +  T1.jarakTitik(T2));
+        System.out.println("Jarak Titik T1 ke Titik T2 adalah " +  T1.getJarak(T2));
         T1.printTitik();
         T1.geser(3.0, 5.0);
         T1.printTitik();
+        T1.getKuadran();
 
         T2 = T1;
         T2.printTitik();

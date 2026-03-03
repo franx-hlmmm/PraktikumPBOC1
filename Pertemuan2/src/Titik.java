@@ -5,86 +5,50 @@
 */
 public class Titik {
     /****ATRIBUT****/
-    double absis;
-    double ordinat;
-    static int counterTitik = 0;
+    private double absis;
+    private double ordinat;
+    private static int counterTitik = 0;
     /****METHOD****/
     //Konstruktor titik (0,0)
-    Titik(){
+    public Titik(){
         absis = 0.0;
         ordinat = 0.0;
         counterTitik++;
     }
 
     //Konstruktor Titik (x,y)
-    Titik(double absis, double ordinat){
+    public Titik(double absis, double ordinat){
         this.absis = absis;
         this.ordinat = ordinat;
         counterTitik++;
     }
 
     //selektor
-    double getAbsis(){
+    public double getAbsis(){
         return absis;
     }
 
-    double getOrdinat(){
+    public double getOrdinat(){
         return ordinat;
     }
 
     //mutator
-    void setAbsis(double absis){
-        this.absis = absis;
+    public void setAbsis(double x){
+        absis = x;
     }
 
-    void setOrdinat(double ordinat){
-        this.ordinat = ordinat;
+    public void setOrdinat(double y){
+        ordinat = y;
     }
 
     //OPERATOR FUNGSI
-    //JarakTitik ke pusat 0,0
-    double jarakTitik(){
-        return Math.sqrt(Math.pow(absis, 2.0) + Math.pow(ordinat, 2.0));
-    }
-    //JarakTitik antara 2 titik
-    double jarakTitik(Titik T2){
-        return Math.sqrt(Math.pow((absis-T2.getAbsis()), 2.0) + Math.pow((ordinat-T2.getOrdinat()), 2.0));
-    }
-    //Dilatasi
-    void dilatasi(double i){
-        absis = i*absis;
-        ordinat = i*ordinat;
-    }
-    //Translasi
-    void geser(double x, double y){
+    //translasi
+    public void geser(double x, double y){
         absis = absis + x;
         ordinat = ordinat + y;
     }
-    //Refleksi
-    void refleksiX(){
-        ordinat = -1*ordinat;
-    }
-    void refleksiY(){
-        absis = -1*absis;
-    }
-    Titik getRefleksiX(){
-        //Kamus Lokal
-        Titik T2 = new Titik();
-        //Algoritma
-        T2.setAbsis(this.absis);
-        T2.setOrdinat(this.ordinat*-1);
-        return T2;
-    }
-    Titik getRefleksiY(){
-        //Kamus Lokal
-        Titik T2 = new Titik();
-        //Algoritma
-        T2.setAbsis(this.absis*-1);
-        T2.setOrdinat(this.ordinat);
-        return T2;
-    }
     //Kuadran
-    int kuadran(){
+    public int getKuadran(){
         if (absis > 0 && ordinat > 0){
             return 1;
         }
@@ -102,16 +66,48 @@ public class Titik {
         }
     }
 
-    void printTitik(){
+    //JarakTitik ke pusat 0,0
+    public double getJarakPusat(){
+        return Math.sqrt(Math.pow(absis, 2.0) + Math.pow(ordinat, 2.0));
+    }
+    //JarakTitik antara 2 titik
+    public double getJarak(Titik T2){
+        return Math.sqrt(Math.pow((absis-T2.getAbsis()), 2.0) + Math.pow((ordinat-T2.getOrdinat()), 2.0));
+    }
+    //Refleksi
+    public void refleksiX(){
+        ordinat = -1*ordinat;
+    }
+    public void refleksiY(){
+        absis = -1*absis;
+    }
+    public Titik getRefleksiX(){
+        //Kamus Lokal
+        Titik T2 = new Titik();
+        //Algoritma
+        T2.setAbsis(this.absis);
+        T2.setOrdinat(this.ordinat*-1);
+        return T2;
+    }
+    public Titik getRefleksiY(){
+        //Kamus Lokal
+        Titik T2 = new Titik();
+        //Algoritma
+        T2.setAbsis(this.absis*-1);
+        T2.setOrdinat(this.ordinat);
+        return T2;
+    }
+    
+    public void printTitik(){
         System.out.println("Titik (" + absis + "," + ordinat + ") ");
     }
 
     //mengembalikan nilai counter titik
-    static int getcounterTitik(){
+    public static int getcounterTitik(){
         return counterTitik;
     }
 
-    void printCounterTitik(){
+    public void printCounterTitik(){
         System.out.println(this.counterTitik);
     }
 }
