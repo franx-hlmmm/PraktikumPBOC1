@@ -1,5 +1,5 @@
-/* Nama File    : MTitik.java
- * Deskripsi    : berisi atribut dan method dalam class Titik
+/* Nama File    : MGaris.java
+ * Deskripsi    : berisi atribut dan method dalam class Garis
  * Pembuat      : Farras Hilmy Zaidan - 24060124120003
  * Tanggal      : 26 Februari 2026
 */
