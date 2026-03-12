@@ -1,3 +1,9 @@
+/* Nama File    : MMahasiswa.java
+ * Deskripsi    : berisi atribut dan method dalam class MMahasiswa
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 11 Mareet 2026
+*/
+
 public class MMahasiswa {
     public static void main(String[] args) {
         /***MATA KULIAH***/

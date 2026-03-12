@@ -1,3 +1,9 @@
+/* Nama File    : Dosen.java
+ * Deskripsi    : berisi atribut dan method dalam class Dosen
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 11 Mareet 2026
+*/
+
 public class Dosen {
     /***ATRIBUT***/
     private String nip; /***Nomor Induk Pegawai***/

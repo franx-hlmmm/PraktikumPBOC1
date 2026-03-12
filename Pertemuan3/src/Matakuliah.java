@@ -1,3 +1,9 @@
+/* Nama File    : MataKuliah.java
+ * Deskripsi    : berisi atribut dan method dalam class MataKuliah
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 11 Mareet 2026
+*/
+
 public class MataKuliah {
     /***ATRIBUT***/
     private String idMatkul;
