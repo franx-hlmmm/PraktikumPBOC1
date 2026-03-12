@@ -78,11 +78,14 @@ public class Mahasiswa {
         this.kendaraan = kendaraan;
     }
     /***OPERATOR TAMBAHAN***/
+    /***MENAMPILKAN INFORMASI UMUM MAHASISWA***/
     public void printMhs(){
         System.out.println("Nama : " + nama);
         System.out.println("NIM : " + nim);
         System.out.println("Prodi : " + prodi);
     }
+
+    /***MENAMPILKAN INFORMASI DETAIL MAHASISWA***/
     public void printDetailMhs(){
         int i;
         System.out.println("Nama : " + nama);
@@ -98,9 +101,13 @@ public class Mahasiswa {
         System.out.println("No. Plat Kendaraan : " + kendaraan.getNoPlat());
         System.out.println("Jenis Kendaraan : " + kendaraan.getJenis());
     }
+
+    /***MENGEMBALIKAN JUMLAH MAHASISWA YANG SUDAH ADA***/
     public static int getJmlMhs(){
         return Mahasiswa.countMahasiswa;
     }
+
+    /***MENAMPILKAN JUMLAH MAHASISWA YANG SUDAH ADA***/
     public static void printJmlMhs(){
         System.out.println("Jumlah Mahasiswa : " + Mahasiswa.getJmlMhs());
     }

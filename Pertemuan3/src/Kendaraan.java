@@ -5,6 +5,7 @@ public class Kendaraan {
     private static int countKendaraan; 
 
     /***METHOD***/
+    /***KONSTRUKTOR***/
     public Kendaraan() {
         this("Kosong", "Kosong");
         countKendaraan++;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
@@ -18,6 +19,7 @@ public class Kendaraan {
         }
     }
 
+    /***SELEKTOR***/
     public String getNoPlat() {
         return noPlat;
     }
@@ -26,6 +28,7 @@ public class Kendaraan {
         return jenis;
     }
 
+    /***MUTATOR***/
     public void setNoPlat(String noPlat) {
         this.noPlat = noPlat;
     }
@@ -34,14 +37,18 @@ public class Kendaraan {
         this.jenis = jenis;
     }
 
+    /***OPERATOR TAMBAHAN***/
+    /***MENGEMBALIKAN BANYAKNYA KENDARAAN YANG SUDAH DI BUAT***/
     public static int getCountKendaraan(){
         return Kendaraan.countKendaraan;
     }
 
+    /***MENAMPILKAN JUMLAH KENDARAAN***/
     public static void printCountKendaraan(){
         System.out.println("Jumlah Kendaraan : " + Kendaraan.getCountKendaraan());
     }
 
+    /***MENAMPILKAN INFORMASI LENGKAP KENDARAAN***/
     public void printKendaraan() {
         System.out.println("No Plat: " + noPlat + ", Jenis: " + jenis);
     }
