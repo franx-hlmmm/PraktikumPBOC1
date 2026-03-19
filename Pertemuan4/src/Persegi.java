@@ -1,52 +1,74 @@
 /* Nama File    : Persegi.java
- * Deskripsi    : berisi atribut dan method dalam class Persegi
+ * Deskripsi    : berisi atribut dan method dalam class Persegi yang merupakan turunan dari Bangun Datar
  * Pembuat      : Farras Hilmy Zaidan - 24060124120003
- * Tanggal      : 11 Mareet 2026
+ * Tanggal      : 19 Maret 2026
 */
 
-public class Persegi extends BangunDatar{
+public class Persegi extends BangunDatar {
     /***ATRIBUT***/
-    private double sisi;
-    private static int counterPersegi;
+    private double sisi; // menunjukkan panjang sisi persegi
+    private static int counterPersegi = 0; // atribut static untuk menghitung objek persegi yang berhasil terbentuk
+
     /***METHOD***/
     /***KONSTRUKTOR***/
+    // konstruktor tanpa parameter
     public Persegi() {
-        setJmlSisi(4);
-    }
-    public Persegi(double sisi, String warna, String border) {
-        this.sisi = sisi;
-        setWarna(warna);
-        setBorder(border);
-        setJmlSisi(4);
+        super(); // memanggil konstruktor BangunDatar
+        this.jmlSisi = 4; // bisa karena habis diupdate jadi protected dan masih berada di satu folder yakni src
         counterPersegi++;
     }
+
+    // konstruktor dengan parameter
+    public Persegi(double sisi, String warna, String border) {
+        super(4, warna, border); // memanggil konstruktor superclass
+        this.sisi = sisi;
+        counterPersegi++;
+    }
+
     /***SELEKTOR***/
+    // selektor sisi
     public double getSisi() {
         return sisi;
     }
-    /***MUTATOR***/
+
+    // mutator sisi
     public void setSisi(double sisi) {
         this.sisi = sisi;
     }
+
     /***OPERATOR TAMBAHAN***/
-    public double getLuas () {
-        return sisi*sisi;
+    // menghitung luas persegi
+    public double getLuas() {
+        return sisi * sisi;
     }
+
+    // menghitung keliling persegi
     public double getKeliling() {
-        return sisi*4;
+        return 4 * sisi;
     }
+
+    // menghitung panjang diagonal persegi
     public double getDiagonal() {
-        return Math.sqrt(sisi*sisi + sisi*sisi);
+        return Math.sqrt(2*(sisi*sisi));
     }
+    
+    // mengembalikan banyaknya objek persegi
     public static int getCounterPersegi() {
-        return Persegi.counterPersegi;
+        return counterPersegi;
     }
-    public static void printJmlPersegi() {
-        System.out.println("Jumlah Objek Persegi: " + Persegi.getCounterPersegi());  
+
+    // menampilkan banyaknya objek persegi
+    public static void printCounterPersegi() {
+        System.out.println("Jumlah Objek Persegi: " + Persegi.getCounterPersegi());
     }
+
+    // menampilkan info lengkap persegi
     @Override
     public void printInfo() {
-        super.printInfo();
+        super.printInfo(); // memanggil method dari superclass
         System.out.println("Sisi: " + sisi);
+        System.out.println("Luas: " + getLuas());
+        System.out.println("Keliling: " + getKeliling());
+        System.out.println("Diagonal: " + getDiagonal());
     }
 }

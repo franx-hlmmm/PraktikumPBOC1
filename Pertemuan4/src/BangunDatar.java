@@ -1,20 +1,23 @@
 /* Nama File    : BangunDatar.java
- * Deskripsi    : berisi atribut dan method dalam class BangunDatar
+ * Deskripsi    : berisi atribut dan method dalam class Bangun Datar
  * Pembuat      : Farras Hilmy Zaidan - 24060124120003
- * Tanggal      : 11 Mareet 2026
+ * Tanggal      : 19 Maret 2026
 */
 
 public class BangunDatar {
     /***ATRIBUT***/
-    private int jmlSisi;
-    private String warna;
-    private String border;
-    private static int counterBangunDatar;
+    protected int jmlSisi; // menunjukkan jumlah sisi bangun datar
+    protected String warna; // menunjukkan warna yang ada pada bangun datar 
+    protected String border; // menunjukkan border pada bangun datar
+    protected static int counterBangunDatar = 0; // atribut static untuk menghitung bangun datar yang terbentuk
+
     /***METHOD***/
     /***KONSTRUKTOR***/
+    // konstruktor tanpa parameter
     public BangunDatar() {
-        this(0, "null", "null");
+        counterBangunDatar++;
     }
+    // konstruktor dengan parameter
     public BangunDatar(int jmlSisi, String warna, String border) {
         this.jmlSisi = jmlSisi;
         this.warna = warna;
@@ -22,38 +25,44 @@ public class BangunDatar {
         counterBangunDatar++;
     }
     /***SELEKTOR***/
+    // selektor jumlah sisi
     public int getJmlSisi() {
-        return this.jmlSisi;
+        return jmlSisi;
     }
+    // selektor warna
     public String getWarna() {
-        return this.warna;
+        return warna;
     }
+    // selektor Border
     public String getBorder() {
-        return this.border;
+        return border;
     }
     /***MUTATOR***/
+    // mutator jumlah sisi
     public void setJmlSisi(int jmlSisi) {
         this.jmlSisi = jmlSisi;
     }
+    // mutator warna
     public void setWarna(String warna) {
         this.warna = warna;
     }
+    // mutator border
     public void setBorder(String border) {
         this.border = border;
     }
     /***OPERATOR TAMBAHAN***/
-    /***MENAMPILKAN INFO LENGKAP BANGUN DATAR***/
+    // menampilkan info lengkap sebuah bangun datar
     public void printInfo() {
         System.out.println("Jumlah sisi: " + jmlSisi);
         System.out.println("Warna: " + warna);
         System.out.println("Border: " + border);
     }
-    /***MENGEMBALIKAN JUMLAH BANGUN DATAR YANG SUDAH ADA***/
+    // mengembalikan jumlah objek bangun datar yang berhasil terbentuk
     public static int getCounterBangunDatar() {
-        return BangunDatar.counterBangunDatar;
+        return counterBangunDatar;
     }
-    /**MENAMPILKAN JUMLAH BANGUN DATAR YANG SUDAH ADA***/
-    public static void printJmlBangunDatar() {
-        System.out.println("Jumlah Objek Bangun Datar: " + BangunDatar.getCounterBangunDatar());
+    // menampilkan jumlah objek bangun datar yang sudah tercetak 
+    public static void printCounterBangunDatar() {
+        System.out.println("Jumlah objek: " + BangunDatar.getCounterBangunDatar());
     }
 }
