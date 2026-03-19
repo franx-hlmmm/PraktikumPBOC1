@@ -118,26 +118,26 @@ public class Pegawai {
     }
     // menampilkan info seorang pegawai, tidak langsung ditampilkan semua untuk mempermudah pemanggilan super agar tidak perlu mengurutkan dari awal
     public void printInfo() {
-        System.out.println("NIP             : " + NIP);
-        System.out.println("Nama            : " + nama);
-        System.out.println("Tanggal Lahir   : " + formatTanggal(tglLahir));
-        System.out.println("TMT             : " + formatTanggal(TMT));
-        System.out.println("Masa Kerja      : " + getMasaKerja());
-        System.out.println("Gaji Pokok      : " + formatRupiah(gajiPokok));
+        System.out.println("NIP                     : " + NIP);
+        System.out.println("Nama                    : " + nama);
+        System.out.println("Tanggal Lahir           : " + formatTanggal(tglLahir));
+        System.out.println("TMT                     : " + formatTanggal(TMT));
+        System.out.println("Masa Kerja              : " + getMasaKerja());
+        System.out.println("Gaji Pokok              : " + formatRupiah(gajiPokok));
     }
-    // buat ngegampangin waktu overriding soalnya struktur urutannya beda
+    // semua dibawah komentar ini hanya untuk ngegampangin waktu overriding soalnya struktur urutannya beda, sehingga tidak saya tampilkan di class diagram
     public void printInfoSederhana() {
-        System.out.println("Nama            : " + nama);
-        System.out.println("Tanggal Lahir   : " + formatTanggal(tglLahir));
-        System.out.println("TMT             : " + formatTanggal(TMT));
-    }
+        System.out.println("Nama                    : " + nama);
+        System.out.println("Tanggal Lahir           : " + formatTanggal(tglLahir));
+        System.out.println("TMT                     : " + formatTanggal(TMT));
+    }   
     public void printNIP() {
-        System.out.println("NIP             : " + NIP);
+        System.out.println("NIP                     : " + NIP);
     }
     public void printMasaKerja() {
-        System.out.println("Masa Kerja      : " + getMasaKerja());
+        System.out.println("Masa Kerja              : " + getMasaKerja());
     }
     public void printGajiPokok() {
-        System.out.println("Gaji Pokok      : " + formatRupiah(gajiPokok));
+        System.out.println("Gaji Pokok              : " + formatRupiah(gajiPokok));
     } 
 }

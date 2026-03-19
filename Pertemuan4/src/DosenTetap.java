@@ -1,3 +1,9 @@
+/* Nama File    : DosenTetap.java
+ * Deskripsi    : berisi atribut dan method dalam class Dosentetap yang merupakan turunan dari Dosen
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 19 Maret 2026
+*/
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -54,13 +60,14 @@ public class DosenTetap extends Dosen {
     @Override
     public void printInfo() {
         super.printNIP();
-        System.out.println("NIDN            : " + getNIDN());
+        System.out.println("NIDN                    : " + getNIDN());
         super.printInfoSederhana();
-        System.out.println("Jabatan         : Dosen tetap");
-        System.out.println("Fakultas        : " + getFakultas());
+        System.out.println("Jabatan                 : Dosen Tetap");
+        System.out.println("Fakultas                : " + getFakultas());
         super.printMasaKerja();
-        System.out.println("Tanggal Pensiun : " + formatTanggal(this.getTanggalPensiun()));
+        System.out.println("Batas Usia Pensiun      : " + BUP + " tahun");
+        System.out.println("Tanggal Pensiun         : " + formatTanggal(getTanggalPensiun()));
         super.printGajiPokok();
-        System.out.println("Tunjangan       : 2% x "+ getTahunKerja() + " x " + formatRupiah(gajiPokok) + " = " + formatRupiah(getTunjangan()));
+        System.out.println("Tunjangan               : 2% x "+ getTahunKerja() + " x " + formatRupiah(gajiPokok) + " = " + formatRupiah(getTunjangan()));
     }
 }

@@ -1,3 +1,9 @@
+/* Nama File    : Dosen.java
+ * Deskripsi    : berisi atribut dan method dalam class Dosen yang merupakan turunan dari Pegawai
+ * Pembuat      : Farras Hilmy Zaidan - 24060124120003
+ * Tanggal      : 19 Maret 2026
+*/
+
 import java.time.LocalDate;
 
 public class Dosen extends Pegawai{
@@ -41,6 +47,6 @@ public class Dosen extends Pegawai{
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("Fakultas        : " + this.getFakultas());
+        System.out.println("Fakultas                : " + this.getFakultas());
     }
 }
