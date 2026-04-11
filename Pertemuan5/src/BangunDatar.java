@@ -66,6 +66,14 @@ public abstract class BangunDatar {
     public static int getCounterBangunDatar() {
         return counterBangunDatar;
     }
+    // mengembalikan true/false cek kesamaan luas
+    public boolean isEqualLuas(BangunDatar X) {
+        return this.getLuas() == X.getLuas();
+    }
+    // mengembalikan true/false cek kesamaan Keliling
+    public boolean isEqualKeliling(BangunDatar X) {
+        return this.getKeliling() == X.getKeliling();
+    }
     // menampilkan jumlah objek bangun datar yang sudah tercetak 
     public static void printCounterBangunDatar() {
         System.out.println("Jumlah objek: " + BangunDatar.getCounterBangunDatar());
