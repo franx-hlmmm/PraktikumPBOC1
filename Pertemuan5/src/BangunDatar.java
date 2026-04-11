@@ -50,10 +50,7 @@ public abstract class BangunDatar {
     public void setBorder(String border) {
         this.border = border;
     }
-    //luas
-    public abstract double getLuas();
-    //keliling
-    public abstract double getKeliling();
+    // 
     /***OPERATOR TAMBAHAN***/
     // menampilkan info lengkap sebuah bangun datar
     public void printInfo() {
@@ -61,6 +58,10 @@ public abstract class BangunDatar {
         System.out.println("Warna: " + warna);
         System.out.println("Border: " + border);
     }
+    // mengmebalikan besaran luas
+    public abstract double getLuas();
+    // mengembalikan besaran keliling
+    public abstract double getKeliling();
     // mengembalikan jumlah objek bangun datar yang berhasil terbentuk
     public static int getCounterBangunDatar() {
         return counterBangunDatar;

@@ -37,11 +37,13 @@ public class Lingkaran extends BangunDatar {
 
     /***OPERATOR TAMBAHAN***/
     // menghitung luas lingkaran
+    @Override
     public double getLuas() {
         return Math.PI * jari * jari;
     }
 
     // menghitung keliling lingkaran
+    @Override
     public double getKeliling() {
         return 2 * Math.PI * jari;
     }

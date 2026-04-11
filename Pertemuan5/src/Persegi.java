@@ -38,11 +38,13 @@ public class Persegi extends BangunDatar {
 
     /***OPERATOR TAMBAHAN***/
     // menghitung luas persegi
+    @Override
     public double getLuas() {
         return sisi * sisi;
     }
 
     // menghitung keliling persegi
+    @Override
     public double getKeliling() {
         return 4 * sisi;
     }

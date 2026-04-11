@@ -13,7 +13,7 @@ public class MBangunDatar {
         /***PERSEGI***/
         System.out.println("------------   PERSEGI   -------------");
         Persegi P1 = new Persegi();
-        P1.setSisi(4);
+        P1.setSisi(10);
         P1.printInfo();
         System.out.println(" ");
 
@@ -27,7 +27,7 @@ public class MBangunDatar {
         L1.printInfo();
         System.out.println(" ");
 
-        Lingkaran L2 = new Lingkaran(10, "Ungu", "Putih");
+        Lingkaran L2 = new Lingkaran(14, "Ungu", "Putih");
         L2.printInfo();
         System.out.println(" ");
 
