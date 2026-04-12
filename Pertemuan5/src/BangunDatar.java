@@ -1,5 +1,5 @@
 /* Nama File    : BangunDatar.java
- * Deskripsi    : berisi atribut dan method dalam class Bangun Datar
+ * Deskripsi    : berisi atribut dan method dalam abstract class Bangun Datar
  * Pembuat      : Farras Hilmy Zaidan - 24060124120003
  * Tanggal      : 19 Maret 2026
 */
