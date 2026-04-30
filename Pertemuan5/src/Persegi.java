@@ -4,7 +4,7 @@
  * Tanggal      : 19 Maret 2026
 */
 
-public class Persegi extends BangunDatar {
+public class Persegi extends BangunDatar implements IResize {
     /***ATRIBUT***/
     private double sisi; // menunjukkan panjang sisi persegi
     private static int counterPersegi = 0; // atribut static untuk menghitung objek persegi yang berhasil terbentuk
@@ -62,6 +62,22 @@ public class Persegi extends BangunDatar {
     // menampilkan banyaknya objek persegi
     public static void printCounterPersegi() {
         System.out.println("Jumlah Objek Persegi: " + Persegi.getCounterPersegi());
+    }
+
+    // Zoom
+    @Override
+    public void zoomIn() {
+        sisi = sisi * 1.1;
+    }
+
+    @Override
+    public void zoomOut() {
+        sisi = sisi * 0.9;
+    }
+
+    @Override
+    public void zoom(int percent) {
+        sisi = sisi * percent/100.0;
     }
 
     // menampilkan info lengkap persegi

@@ -1,5 +1,5 @@
 /* Nama File    : BangunDatar.java
- * Deskripsi    : berisi atribut dan method dalam class Bangun Datar
+ * Deskripsi    : berisi atribut dan method dalam abstract class Bangun Datar
  * Pembuat      : Farras Hilmy Zaidan - 24060124120003
  * Tanggal      : 19 Maret 2026
 */
@@ -65,6 +65,14 @@ public abstract class BangunDatar {
     // mengembalikan jumlah objek bangun datar yang berhasil terbentuk
     public static int getCounterBangunDatar() {
         return counterBangunDatar;
+    }
+    // mengembalikan true/false cek kesamaan luas
+    public boolean isEqualLuas(BangunDatar X) {
+        return this.getLuas() == X.getLuas();
+    }
+    // mengembalikan true/false cek kesamaan Keliling
+    public boolean isEqualKeliling(BangunDatar X) {
+        return this.getKeliling() == X.getKeliling();
     }
     // menampilkan jumlah objek bangun datar yang sudah tercetak 
     public static void printCounterBangunDatar() {

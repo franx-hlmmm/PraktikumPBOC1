@@ -4,7 +4,7 @@
  * Tanggal      : 19 Maret 2026
 */
 
-public class Lingkaran extends BangunDatar {
+public class Lingkaran extends BangunDatar implements IResize {
     /***ATRIBUT***/
     private double jari; // menunjukkan jari-jari lingkaran
     private static int counterLingkaran = 0;
@@ -51,6 +51,22 @@ public class Lingkaran extends BangunDatar {
     // mengembalikan banyaknya objek lingkaran
     public static int getCounterLingkaran() {
         return counterLingkaran;
+    }
+
+    // Zoom
+    @Override
+    public void zoomIn() {
+        jari = jari * 1.1;
+    }
+
+    @Override
+    public void zoomOut() {
+        jari = jari * 0.9;
+    }
+
+    @Override
+    public void zoom(int percent) {
+        jari = jari * percent/100.0;
     }
 
     // menampilkan banyaknya objek Lingkaran
