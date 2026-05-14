@@ -18,11 +18,13 @@ public class Teman {
         this.Lnama = new ArrayList<>();
     }
 
+    /***SELEKTOR***/
     //Method function untuk mengakses jumlah teman
     public int getNbelm() {
         return nbelm;
     }
 
+    /***OPERATOR TAMBAHAN***/
     //Method function untuk mengakses dan memodifikasi nama teman
     public String getNama(int indeks) {
         if (indeks >= 0 && indeks < nbelm) {

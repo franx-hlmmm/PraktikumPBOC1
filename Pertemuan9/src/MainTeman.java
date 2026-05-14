@@ -1,10 +1,10 @@
-/* Nama File    : Main.java
+/* Nama File    : MainTeman.java
  * Deskripsi    : Kelas untuk run koleksi objek teman
  * Pembuat      : Farras Hilmy Zaidan / 24060124120003
  * Tanggal      : 7 Mei 2026
  */
 
-public class Main {
+public class MainTeman {
     public static void main(String[] args) {
         Teman teman = new Teman();
 
