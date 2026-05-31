@@ -22,6 +22,7 @@ import java.sql.SQLException;
 public class MysqlUtility {
     /***************ATRIBUT***************/
     private static Connection koneksi;
+    private static String lastError = "";
 
     /****************METHOD***************/
     /*************METHOD LAIN*************/
@@ -34,7 +35,7 @@ public class MysqlUtility {
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
                 // Menentukan url, user, dan password database.
-                String url = "jdbc:mysql://localhost:3306/pbo";
+                String url = "jdbc:mysql://localhost:3306/pbo?serverTimezone=Asia/Jakarta";
                 String user = "root";
                 String password = "!U20n06D04i24P!";
 
@@ -42,17 +43,24 @@ public class MysqlUtility {
                 koneksi = DriverManager.getConnection(url, user, password);
 
                 // Menampilkan pesan jika koneksi berhasil dibuat.
-                if(koneksi != null){
+                if (koneksi != null) {
                     System.out.println("Koneksi berhasil");
+                    lastError = "";
                 }
             } catch (ClassNotFoundException cne) {
                 // Menampilkan pesan error jika driver MySQL gagal dimuat.
-                System.out.println("Gagal load driver :" + cne.getMessage());
-            } catch (SQLException sqle){
+                lastError = "Gagal load driver: " + cne.getMessage();
+                System.out.println(lastError);
+            } catch (SQLException sqle) {
                 // Menampilkan pesan error jika koneksi database gagal.
-                System.out.println("Gagal koneksi : " + sqle.getMessage());
+                lastError = "Gagal koneksi: " + sqle.getMessage();
+                System.out.println(lastError);
             }
         }
         return koneksi;
+    }
+
+    public static String getLastError() {
+        return lastError;
     }
 }
